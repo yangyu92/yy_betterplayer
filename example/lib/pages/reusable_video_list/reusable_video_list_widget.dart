@@ -82,6 +82,7 @@ class _ReusableVideoListWidgetState extends State<ReusableVideoListWidget> {
   }
 
   void onPlayerEvent(BetterPlayerEvent event) {
+    print(event.betterPlayerEventType);
     if (event.betterPlayerEventType == BetterPlayerEventType.progress) {
       videoListData!.lastPosition = event.parameters!["progress"] as Duration?;
     }
